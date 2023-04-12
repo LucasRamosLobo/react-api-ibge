@@ -27,12 +27,12 @@ function StateCard({ state }) {
 
   return (
     <Container className="mt-3">
-      <Card className="mb-3">
+     <Card className="mb-3" style={{ backgroundColor: '#F2ECE7' }}>
         <Card.Body>
           <Row>
             <Col>
               <h2 className="text-center">{state.nome}</h2>
-              <p>Sigla: {state.sigla}</p>
+              <p style={{textAlign: 'center'}}>Sigla: {state.sigla}</p>
             </Col>
           </Row>
         </Card.Body>
@@ -58,7 +58,7 @@ function StateCard({ state }) {
                   <p className="text-center">Microregião: {selectedMunicipio.microrregiao.nome}</p>
                 </Col>
                 <Col md={6} sm={12}>
-                  <p className="text-center">área: {area}</p>
+                  <p className="text-center">Área: {area} km²</p>
                 </Col>
               </Row>
             </div>

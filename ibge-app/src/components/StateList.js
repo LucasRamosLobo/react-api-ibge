@@ -24,10 +24,10 @@ function StateList() {
 
   return (
     <Container className="d-flex align-items-center justify-content-center">
-      <Card>
+      <Card className="p-3" style={{minWidth: '300px', backgroundColor:'#white', border: '5px solid black', borderRadius:'10px'}}>
         <Card.Body>
           <Card.Title>
-            <h1>Escolha seu estado:</h1>
+            <h1 style={{textAlign:'center'}}>Escolha seu estado:</h1>
           </Card.Title>
           <Form>
             <Form.Group controlId="formStateSelect">

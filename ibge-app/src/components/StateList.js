@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import StateCard from './StateCard';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 
 function StateList() {
   const [states, setStates] = useState([]);

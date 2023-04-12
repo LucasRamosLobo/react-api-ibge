@@ -23,25 +23,29 @@ function StateList() {
   const selectedStateData = states.find(state => state.nome === selectedState);
 
   return (
-      <Container>
-         <Card>
-        <h1>Selecione um estado:</h1>
-        <Form>
-          <Form.Group controlId="formStateSelect">
-            <Form.Label>Estado</Form.Label>
-            <Form.Control as="select" value={selectedState} onChange={handleSelectState}>
-              <option value="">Selecione um estado</option>
-              {states.map(state => (
-                <option key={state.id} value={state.nome}>{state.nome}</option>
-              ))}
-            </Form.Control>
-          </Form.Group>
-        </Form>
-        {selectedStateData && (
-          <StateCard state={selectedStateData} />
-        )}
-            </Card>
-      </Container>
+    <Container className="d-flex align-items-center justify-content-center">
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h1>Escolha seu estado:</h1>
+          </Card.Title>
+          <Form>
+            <Form.Group controlId="formStateSelect">
+              <Form.Label>Estado</Form.Label>
+              <Form.Control as="select" value={selectedState} onChange={handleSelectState}>
+                <option value="">Selecione um estado</option>
+                {states.map(state => (
+                  <option key={state.id} value={state.nome}>{state.nome}</option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+          </Form>
+          {selectedStateData && (
+            <StateCard state={selectedStateData} />
+          )}
+        </Card.Body>
+      </Card>
+    </Container>
   );
 }
 
